@@ -1,0 +1,427 @@
+# testing new commit
+
+{
+  "openapi": "3.0.0",
+  "info":
+    {
+      "title": "CIM Customer",
+      "version": "1.0.0",
+      "license": { "name": "ISC" },
+      "description": "Specification JSONs: [v2](/api-spec/v2), [v3](/api-spec/v3).\n\nNothing",
+    },
+  "paths":
+    {
+      "/customerSchema":
+        {
+          "get":
+            {
+              "summary": "/customerSchema",
+              "responses":
+                {
+                  "200":
+                    {
+                      "description": "OK",
+                      "content":
+                        {
+                          "application/json":
+                            {
+                              "schema":
+                                {
+                                  "type": "array",
+                                  "items":
+                                    {
+                                      "type": "object",
+                                      "properties":
+                                        {
+                                          "_id": { "type": "string" },
+                                          "key": { "type": "string" },
+                                          "channelTypes":
+                                            {
+                                              "type": "array",
+                                              "items": { "type": "string" },
+                                            },
+                                          "defaultValue":
+                                            {
+                                              "oneOf":
+                                                [
+                                                  { "type": "string" },
+                                                  { "type": "boolean" },
+                                                ],
+                                            },
+                                          "description": { "type": "string" },
+                                          "isChannelIdentifier":
+                                            { "type": "boolean" },
+                                          "isDeleteAble": { "type": "boolean" },
+                                          "isPii": { "type": "boolean" },
+                                          "isRequired": { "type": "boolean" },
+                                          "label": { "type": "string" },
+                                          "length": { "type": "number" },
+                                          "sortOrder": { "type": "number" },
+                                          "type": { "type": "string" },
+                                        },
+                                      "required":
+                                        [
+                                          "_id",
+                                          "key",
+                                          "channelTypes",
+                                          "defaultValue",
+                                          "description",
+                                          "isChannelIdentifier",
+                                          "isDeleteAble",
+                                          "isPii",
+                                          "isRequired",
+                                          "label",
+                                          "length",
+                                          "sortOrder",
+                                          "type",
+                                        ],
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+              "tags": [],
+            },
+          "post": { "summary": "/customerSchema", "responses": {}, "tags": [] },
+        },
+      "/customerSchema/{id}":
+        {
+          "get":
+            {
+              "summary": "/customerSchema/{id}",
+              "parameters":
+                [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": { "type": "string" },
+                  },
+                ],
+              "responses": {},
+              "tags": [],
+            },
+          "put":
+            {
+              "summary": "/customerSchema/{id}",
+              "parameters":
+                [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": { "type": "string" },
+                  },
+                ],
+              "responses": {},
+              "tags": [],
+            },
+          "delete":
+            {
+              "summary": "/customerSchema/{id}",
+              "parameters":
+                [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": { "type": "string" },
+                  },
+                ],
+              "responses": {},
+              "tags": [],
+            },
+        },
+      "/attributeTypes":
+        {
+          "get": { "summary": "/attributeTypes", "responses": {}, "tags": [] },
+        },
+      "/customerSchemaOrder":
+        {
+          "put":
+            { "summary": "/customerSchemaOrder", "responses": {}, "tags": [] },
+        },
+      "/customers":
+        {
+          "get":
+            {
+              "summary": "/customers",
+              "responses":
+                {
+                  "200":
+                    {
+                      "description": "OK",
+                      "content":
+                        {
+                          "application/json":
+                            {
+                              "schema":
+                                {
+                                  "type": "array",
+                                  "items":
+                                    {
+                                      "type": "object",
+                                      "properties":
+                                        {
+                                          "_id": { "type": "string" },
+                                          "phoneNumber":
+                                            {
+                                              "type": "array",
+                                              "items": { "type": "string" },
+                                            },
+                                          "firstName": { "type": "string" },
+                                          "web":
+                                            {
+                                              "type": "array",
+                                              "items": { "type": "string" },
+                                            },
+                                          "isAnonymous": { "type": "boolean" },
+                                          "__v": { "type": "number" },
+                                          "facebook":
+                                            {
+                                              "type": "array",
+                                              "items": { "type": "string" },
+                                            },
+                                          "instagram":
+                                            {
+                                              "type": "array",
+                                              "items": { "type": "string" },
+                                            },
+                                          "labels":
+                                            { "type": "array", "items": {} },
+                                          "telegram":
+                                            {
+                                              "type": "array",
+                                              "items": { "type": "string" },
+                                            },
+                                          "twitter":
+                                            {
+                                              "type": "array",
+                                              "items": { "type": "string" },
+                                            },
+                                          "viber":
+                                            {
+                                              "type": "array",
+                                              "items": { "type": "string" },
+                                            },
+                                          "voice":
+                                            {
+                                              "type": "array",
+                                              "items": { "type": "string" },
+                                            },
+                                        },
+                                      "required":
+                                        [
+                                          "_id",
+                                          "phoneNumber",
+                                          "firstName",
+                                          "web",
+                                          "isAnonymous",
+                                          "__v",
+                                          "facebook",
+                                          "instagram",
+                                          "labels",
+                                          "telegram",
+                                          "twitter",
+                                          "viber",
+                                          "voice",
+                                        ],
+                                    },
+                                },
+                            },
+                        },
+                    },
+                },
+              "tags": [],
+            },
+          "post": { "summary": "/customers", "responses": {}, "tags": [] },
+        },
+      "/customers/{id}":
+        {
+          "get":
+            {
+              "summary": "/customers/{id}",
+              "parameters":
+                [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": { "type": "string" },
+                  },
+                ],
+              "responses": {},
+              "tags": [],
+            },
+          "put":
+            {
+              "summary": "/customers/{id}",
+              "parameters":
+                [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": { "type": "string" },
+                  },
+                ],
+              "responses": {},
+              "tags": [],
+            },
+          "delete":
+            {
+              "summary": "/customers/{id}",
+              "parameters":
+                [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": { "type": "string" },
+                  },
+                ],
+              "responses": {},
+              "tags": [],
+            },
+        },
+      "/requestSchema":
+        {
+          "get": { "summary": "/requestSchema", "responses": {}, "tags": [] },
+          "post": { "summary": "/requestSchema", "responses": {}, "tags": [] },
+          "put": { "summary": "/requestSchema", "responses": {}, "tags": [] },
+          "delete":
+            { "summary": "/requestSchema", "responses": {}, "tags": [] },
+        },
+      "/request":
+        {
+          "get": { "summary": "/request", "responses": {}, "tags": [] },
+          "post": { "summary": "/request", "responses": {}, "tags": [] },
+          "put": { "summary": "/request", "responses": {}, "tags": [] },
+          "delete": { "summary": "/request", "responses": {}, "tags": [] },
+        },
+      "/userPreference":
+        {
+          "get": { "summary": "/userPreference", "responses": {}, "tags": [] },
+          "post": { "summary": "/userPreference", "responses": {}, "tags": [] },
+        },
+      "/userPreference/{id}":
+        {
+          "put":
+            {
+              "summary": "/userPreference/{id}",
+              "parameters":
+                [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": { "type": "string" },
+                  },
+                ],
+              "responses": {},
+              "tags": [],
+            },
+          "delete":
+            {
+              "summary": "/userPreference/{id}",
+              "parameters":
+                [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": { "type": "string" },
+                  },
+                ],
+              "responses": {},
+              "tags": [],
+            },
+        },
+      "/interaction":
+        {
+          "get": { "summary": "/interaction", "responses": {}, "tags": [] },
+          "post": { "summary": "/interaction", "responses": {}, "tags": [] },
+          "put": { "summary": "/interaction", "responses": {}, "tags": [] },
+        },
+      "/applicationSetting":
+        {
+          "get":
+            { "summary": "/applicationSetting", "responses": {}, "tags": [] },
+          "post":
+            { "summary": "/applicationSetting", "responses": {}, "tags": [] },
+          "put":
+            { "summary": "/applicationSetting", "responses": {}, "tags": [] },
+          "delete":
+            { "summary": "/applicationSetting", "responses": {}, "tags": [] },
+        },
+      "/channelIdentifier":
+        {
+          "get":
+            { "summary": "/channelIdentifier", "responses": {}, "tags": [] },
+          "post":
+            { "summary": "/channelIdentifier", "responses": {}, "tags": [] },
+          "put":
+            { "summary": "/channelIdentifier", "responses": {}, "tags": [] },
+          "delete":
+            { "summary": "/channelIdentifier", "responses": {}, "tags": [] },
+        },
+      "/label":
+        {
+          "get": { "summary": "/label", "responses": {}, "tags": [] },
+          "post": { "summary": "/label", "responses": {}, "tags": [] },
+          "put": { "summary": "/label", "responses": {}, "tags": [] },
+          "delete": { "summary": "/label", "responses": {}, "tags": [] },
+        },
+      "/directory":
+        {
+          "get": { "summary": "/directory", "responses": {}, "tags": [] },
+          "post": { "summary": "/directory", "responses": {}, "tags": [] },
+          "put": { "summary": "/directory", "responses": {}, "tags": [] },
+          "delete": { "summary": "/directory", "responses": {}, "tags": [] },
+        },
+      "/log-level/{level}":
+        {
+          "put":
+            {
+              "summary": "/log-level/{level}",
+              "parameters":
+                [
+                  {
+                    "name": "level",
+                    "in": "path",
+                    "required": true,
+                    "schema": { "type": "string" },
+                  },
+                ],
+              "responses": {},
+              "tags": [],
+            },
+        },
+      "/agentSetting":
+        { "get": { "summary": "/agentSetting", "responses": {}, "tags": [] } },
+      "/agentSetting/{id}":
+        {
+          "put":
+            {
+              "summary": "/agentSetting/{id}",
+              "parameters":
+                [
+                  {
+                    "name": "id",
+                    "in": "path",
+                    "required": true,
+                    "schema": { "type": "string" },
+                  },
+                ],
+              "responses": {},
+              "tags": [],
+            },
+        },
+      "/health":
+        { "get": { "summary": "/health", "responses": {}, "tags": [] } },
+      "/metrics":
+        { "get": { "summary": "/metrics", "responses": {}, "tags": [] } },
+    },
+  "tags": [],
+}
